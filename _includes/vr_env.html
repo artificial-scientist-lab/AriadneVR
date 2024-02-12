@@ -1,31 +1,13 @@
-<html>
 
-<head>
-    <title>VRiadne</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://unpkg.com/super-hands@^3.0.4/dist/super-hands.min.js"></script>
-    <script src="https://unpkg.com/mathjs@11.11.1/lib/browser/math.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
-    <script src="https://unpkg.com/aframe-fps-counter-component@1.0.1/dist/aframe-fps-counter-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
-    <script src="https://unpkg.com/aframe-super-keyboard@2.1.0/dist/aframe-super-keyboard.min.js"></script>
-    <script src="./src/components/graph.js"></script>
-    <script src="./src/components/edge.js" type="module"></script>
-    <script src="./src/components/vertex.js"></script>
-    <script src="./src/components/graph-editor.js"></script>
-    <script src="./src/components/perfect-matching.js"></script>
-    <script src="./src/components/user-interface.js"></script>
-    <script src="./src/components/graph-library.js"></script>
-    <script src="./lib/helpers.js"></script>
-</head>
+<div id="VR-scene">
 
-<body>
-    <a-scene 
-        physics="gravity: 0; stats: panel; debug: false" 
-        stats 
+<a-scene 
+        physics="gravity: 0; debug: false" 
         background="#D3D3D3"
         renderer="highRefreshRate: true;"
+        embedded
         >
+        <canvas></canvas>
         <a-plane 
         color="#494c52" 
         height="10" 
@@ -34,7 +16,6 @@
         material="side: double"
         position="0 0 0">
         </a-plane>
-        
         <a-entity id="player">
             <a-entity id="leftHandCollider" 
                 laser-controls="hand: left; model: true"
@@ -122,8 +103,5 @@
                 fps-counter="for90fps: true">
             </a-entity>
         </a-plane>
-
-    </a-scene>
-</body>
-
-</html>
+</a-scene>
+</div>
