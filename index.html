@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>VRiadne</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/super-hands@^3.0.4/dist/super-hands.min.js"></script>
+    <script src="https://unpkg.com/mathjs@11.11.1/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-fps-counter-component@1.0.1/dist/aframe-fps-counter-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-super-keyboard@2.1.0/dist/aframe-super-keyboard.min.js"></script>
+    <script src="./src/components/graph.js"></script>
+    <script src="./src/components/edge.js" type="module"></script>
+    <script src="./src/components/vertex.js"></script>
+    <script src="./src/components/graph-editor.js"></script>
+    <script src="./src/components/perfect-matching.js"></script>
+    <script src="./src/components/user-interface.js"></script>
+    <script src="./src/components/graph-library.js"></script>
+    <script src="./lib/helpers.js"></script>
+</head>
+
+<body>
+    <a-scene 
+        physics="gravity: 0; stats: panel; debug: false" 
+        stats 
+        background="#D3D3D3"
+        renderer="highRefreshRate: true;"
+        >
+        <a-plane 
+        color="#494c52" 
+        height="10" 
+        width="10" 
+        rotation="-90 0 0" 
+        material="side: double"
+        position="0 0 0">
+        </a-plane>
+        
+        <a-entity id="player">
+            <a-entity id="leftHandCollider" 
+                laser-controls="hand: left; model: true"
+                raycaster="
+                    objects: [raycastable]; 
+                    lineColor: #EF8354; 
+                    lineOpacity: 0.5; 
+                    far:2; 
+                    near: 0.01; 
+                    interval: 100"
+                static-body="shape: none;"
+                shape__main="shape: sphere; radius: 0.005; offset: +0.01 -0.03 -0.06" 
+                super-hands="
+                    grabStartButtons : triggerdown, gripdown;
+                    grabEndButtons: triggerup, gripup;
+                    stretchStartButtons: gripdown;
+                    stretchEndButtons: gripup;
+                    colliderEvent: collisions;
+                    colliderEventProperty: els;
+                    colliderEndEvent: collisions;
+                    colliderEndEventProperty: clearedEls" 
+                collision-filter="
+                    group: hands;
+                    collidesWith: graph, vertex, button, ui;
+                    collisionForces: false"
+                physics-collider
+                graph-library>
+                <a-sphere id="leftHandColliderSphere" radius="0.005" color="blue" position="+0.01 -0.03 -0.06"
+                    segments-width="16"
+                    segments-height="8"
+                    visible="true"></a-sphere>
+            </a-entity>
+
+            <a-entity id="rightHandCollider" 
+                laser-controls="hand: right; model: true"
+                raycaster="
+                    objects: [raycastable]; 
+                    lineColor: #EF8354; 
+                    lineOpacity: 0.5; 
+                    far:2; 
+                    near: 0.01; 
+                    interval: 100"
+                cursor
+                static-body="shape: none;"
+                shape__main="shape: sphere; radius: 0.005; offset: -0.01 -0.03 -0.06" 
+                graph-editor physics-collider
+                super-hands="
+                    grabStartButtons : triggerdown, gripdown;
+                    grabEndButtons: triggerup, gripup;
+                    stretchStartButtons: gripdown;
+                    stretchEndButtons: gripup;
+                    colliderEvent: collisions;
+                    colliderEventProperty: els;
+                    colliderEndEvent: collisions;
+                    colliderEndEventProperty: clearedEls" 
+                collision-filter="
+                    group: hands;
+                    collidesWith: graph, vertex, button, ui;
+                    collisionForces: false">                 
+                <a-sphere 
+                    id="rightHandColliderSphere" 
+                    radius="0.005" 
+                    color="blue" 
+                    segments-width="16"
+                    segments-height="8"
+                    position="-0.01 -0.03 -0.06"
+                    visible="true"></a-sphere>
+            </a-entity>
+
+            <a-entity id="povCam" camera look-controls wasd-controls position="0 1.7 0" >
+            </a-entity>
+        </a-entity>
+
+        <a-plane 
+            color="#F4E6B8" 
+            height="0.5" 
+            width="1" 
+            rotation="-45 0 0" 
+            material="side: double" 
+            position="0 1 -0.75"
+            controlpanel>
+            <a-entity id="fps-counter" 
+                position="0.48 -0.236 0.01" 
+                scale="0.4 0.4 0.4"
+                fps-counter="for90fps: true">
+            </a-entity>
+        </a-plane>
+
+    </a-scene>
+</body>
+
+</html>

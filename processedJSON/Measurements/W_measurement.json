@@ -1,0 +1,237 @@
+{
+    "graph": {
+        "vertices": [
+            {
+                "id": 0,
+                "position": [
+                    -0.006320284974139854,
+                    -0.021582990650790668,
+                    -0.08143625283941316
+                ],
+                "geometry": "tetrahedron",
+                "edges": [
+                    6,
+                    3
+                ],
+                "neighbours": [
+                    3,
+                    5
+                ]
+            },
+            {
+                "id": 1,
+                "position": [
+                    0.06225669802364597,
+                    0.017641790181759404,
+                    0.019291207869367902
+                ],
+                "geometry": "tetrahedron",
+                "edges": [
+                    0,
+                    5,
+                    1
+                ],
+                "neighbours": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            {
+                "id": 2,
+                "position": [
+                    -0.04795220953666562,
+                    0.029623492513811973,
+                    0.08330560369459164
+                ],
+                "geometry": "tetrahedron",
+                "edges": [
+                    4,
+                    2
+                ],
+                "neighbours": [
+                    4,
+                    5
+                ]
+            },
+            {
+                "id": 3,
+                "position": [
+                    0.08132123750707673,
+                    -0.008228330115776844,
+                    -0.06343936901762906
+                ],
+                "geometry": "cube",
+                "edges": [
+                    6,
+                    0
+                ],
+                "neighbours": [
+                    0,
+                    1
+                ]
+            },
+            {
+                "id": 4,
+                "position": [
+                    0.03968931294455039,
+                    0.04297815304882364,
+                    0.10130248751637627
+                ],
+                "geometry": "cube",
+                "edges": [
+                    5,
+                    4
+                ],
+                "neighbours": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "id": 5,
+                "position": [
+                    -0.02888767005324085,
+                    0.0037533722163424436,
+                    0.0005750268075723863
+                ],
+                "geometry": "cube",
+                "edges": [
+                    3,
+                    1,
+                    2
+                ],
+                "neighbours": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        ],
+        "edges": [
+            {
+                "id": 0,
+                "config": [
+                    1,
+                    3,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 1,
+                "config": [
+                    1,
+                    5,
+                    1,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 2,
+                "config": [
+                    2,
+                    5,
+                    1,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 3,
+                "config": [
+                    0,
+                    5,
+                    1,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 4,
+                "config": [
+                    2,
+                    4,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 5,
+                "config": [
+                    1,
+                    4,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 6,
+                "config": [
+                    0,
+                    3,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            }
+        ],
+        "target_state": [
+            "001",
+            "010",
+            "100"
+        ],
+        "in_nodes": [
+            0,
+            1,
+            2
+        ],
+        "num_anc": 3
+    }
+}

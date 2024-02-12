@@ -1,0 +1,395 @@
+{
+    "graph": {
+        "vertices": [
+            {
+                "id": 0,
+                "position": [
+                    0.049679714718557,
+                    -0.04234878800958394,
+                    -0.08948315284004127
+                ],
+                "geometry": "tetrahedron",
+                "edges": [
+                    10,
+                    0,
+                    7
+                ],
+                "neighbours": [
+                    2,
+                    3,
+                    4
+                ]
+            },
+            {
+                "id": 1,
+                "position": [
+                    -0.035508132547081815,
+                    0.06437911235046867,
+                    0.03331015928492143
+                ],
+                "geometry": "tetrahedron",
+                "edges": [
+                    1,
+                    12,
+                    2,
+                    8,
+                    11,
+                    3
+                ],
+                "neighbours": [
+                    2,
+                    3,
+                    3,
+                    4,
+                    5,
+                    5
+                ]
+            },
+            {
+                "id": 2,
+                "position": [
+                    -0.06939015156422652,
+                    -0.01955556274545374,
+                    -0.033280820453052404
+                ],
+                "geometry": "sphere",
+                "edges": [
+                    10,
+                    1,
+                    9,
+                    4,
+                    5
+                ],
+                "neighbours": [
+                    0,
+                    1,
+                    3,
+                    3,
+                    5
+                ]
+            },
+            {
+                "id": 3,
+                "position": [
+                    -0.012377442291208381,
+                    -0.085427631426424,
+                    0.02073913201487653
+                ],
+                "geometry": "sphere",
+                "edges": [
+                    0,
+                    12,
+                    2,
+                    9,
+                    4,
+                    13
+                ],
+                "neighbours": [
+                    0,
+                    1,
+                    1,
+                    2,
+                    2,
+                    5
+                ]
+            },
+            {
+                "id": 4,
+                "position": [
+                    0.09226283650732142,
+                    0.06314085574142139,
+                    -0.0057906502910397275
+                ],
+                "geometry": "cube",
+                "edges": [
+                    7,
+                    8,
+                    6
+                ],
+                "neighbours": [
+                    0,
+                    1,
+                    5
+                ]
+            },
+            {
+                "id": 5,
+                "position": [
+                    0.02150416940184425,
+                    -0.0014930490433308124,
+                    0.08733042311378325
+                ],
+                "geometry": "cube",
+                "edges": [
+                    11,
+                    3,
+                    5,
+                    13,
+                    6
+                ],
+                "neighbours": [
+                    1,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        ],
+        "edges": [
+            {
+                "id": 0,
+                "config": [
+                    0,
+                    3,
+                    0,
+                    1
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 1,
+                "config": [
+                    1,
+                    2,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 2,
+                "config": [
+                    1,
+                    3,
+                    2,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    0,
+                    [
+                        "edge__12"
+                    ]
+                ]
+            },
+            {
+                "id": 3,
+                "config": [
+                    1,
+                    5,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    0,
+                    [
+                        "edge__11"
+                    ]
+                ]
+            },
+            {
+                "id": 4,
+                "config": [
+                    2,
+                    3,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    0,
+                    [
+                        "edge__9"
+                    ]
+                ]
+            },
+            {
+                "id": 5,
+                "config": [
+                    2,
+                    5,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 6,
+                "config": [
+                    4,
+                    5,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 7,
+                "config": [
+                    0,
+                    4,
+                    0,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 8,
+                "config": [
+                    1,
+                    4,
+                    1,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 9,
+                "config": [
+                    2,
+                    3,
+                    0,
+                    2
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    1,
+                    [
+                        "edge__4"
+                    ]
+                ]
+            },
+            {
+                "id": 10,
+                "config": [
+                    0,
+                    2,
+                    1,
+                    1
+                ],
+                "amplitude": 1.0,
+                "phase": 1.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            },
+            {
+                "id": 11,
+                "config": [
+                    1,
+                    5,
+                    2,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    1,
+                    [
+                        "edge__3"
+                    ]
+                ]
+            },
+            {
+                "id": 12,
+                "config": [
+                    1,
+                    3,
+                    0,
+                    1
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    1,
+                    1,
+                    [
+                        "edge__2"
+                    ]
+                ]
+            },
+            {
+                "id": 13,
+                "config": [
+                    3,
+                    5,
+                    2,
+                    0
+                ],
+                "amplitude": 1.0,
+                "phase": 0.0,
+                "siblingConfig": [
+                    0,
+                    0,
+                    []
+                ]
+            }
+        ],
+        "target_state": [
+            "0000",
+            "0101",
+            "0202",
+            "1011",
+            "1112",
+            "1210"
+        ],
+        "in_nodes": [
+            0,
+            1
+        ],
+        "out_nodes": [
+            2,
+            3
+        ],
+        "num_anc": 2
+    }
+}
