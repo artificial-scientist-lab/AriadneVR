@@ -259,7 +259,7 @@ AFRAME.registerComponent("edge", {
 		updates the edge geometry line segment by segment when edge ends are grabbed
 	*/
 	moveEdge: function () {
-		// greatly inspired by West Langley's answer on stackoverflow https://stackoverflow.com/questions/62416963/three-js-rope-cable-effect-animating-thick-lines
+		// greatly inspired by WestLangley's answer on stackoverflow https://stackoverflow.com/questions/62416963/three-js-rope-cable-effect-animating-thick-lines
 		curve.points = this.getCurveAnchors();
 
 		for (let i = 0; i <= lineSegmentCount; i++) {
