@@ -1,0 +1,11 @@
+---
+layout: page
+title: Fig. 4(b) I.
+permalink: /GHZ-358
+tag: vr_env
+---
+
+Interactive plotly graph for a 3-particle 5-dimensional GHZ-state:
+{% include ghz_358_layout.html %}
+Minimal VR-environment:
+{% include ghz358_vr_env.html %}

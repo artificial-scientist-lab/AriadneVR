@@ -1,0 +1,539 @@
+
+<div id="VR-scene">
+
+<a-scene 
+        physics="gravity: 0; debug: false" 
+        background="#D3D3D3"
+        renderer="highRefreshRate: true;"
+        embedded
+        >
+        <canvas></canvas>
+        <a-plane 
+        color="#494c52" 
+        height="10" 
+        width="10" 
+        rotation="-90 0 0" 
+        material="side: double"
+        position="0 0 0">
+        </a-plane>
+        <a-entity id="player">
+            <a-entity id="leftHandCollider" 
+                laser-controls="hand: left; model: true"
+                raycaster="
+                objects: [raycastable]; 
+                lineColor: #EF8354; 
+                lineOpacity: 0.5; 
+                far:2; 
+                near: 0.01; 
+                interval: 100"
+                static-body="shape: none;"
+                shape__main="shape: sphere; radius: 0.005; offset: +0.01 -0.03 -0.06" 
+                super-hands="
+                    grabStartButtons : triggerdown, gripdown;
+                    grabEndButtons: triggerup, gripup;
+                    stretchStartButtons: gripdown;
+                    stretchEndButtons: gripup;
+                    colliderEvent: collisions;
+                    colliderEventProperty: els;
+                    colliderEndEvent: collisions;
+                    colliderEndEventProperty: clearedEls" 
+                collision-filter="
+                    group: hands;
+                    collidesWith: graph, vertex, button, ui;
+                    collisionForces: false"
+                physics-collider>
+                <a-sphere id="leftHandColliderSphere" radius="0.005" color="blue" position="+0.01 -0.03 -0.06"
+                    segments-width="16"
+                    segments-height="8"
+                    visible="true"></a-sphere>
+            </a-entity>
+
+            <a-entity id="rightHandCollider" 
+                position="0 1.7 -0.2"
+                laser-controls="hand: right; model: true"
+                raycaster="
+                objects: [raycastable]; 
+                lineColor: #EF8354; 
+                lineOpacity: 0.5; 
+                far:2; 
+                near: 0.01; 
+                interval: 100"
+                static-body="shape: none;"
+                shape__main="shape: sphere; radius: 0.005; offset: -0.01 -0.03 -0.06" 
+                physics-collider
+                super-hands="
+                    grabStartButtons : triggerdown, gripdown;
+                    grabEndButtons: triggerup, gripup;
+                    stretchStartButtons: gripdown;
+                    stretchEndButtons: gripup;
+                    colliderEvent: collisions;
+                    colliderEventProperty: els;
+                    colliderEndEvent: collisions;
+                    colliderEndEventProperty: clearedEls" 
+                collision-filter="
+                    group: hands;
+                    collidesWith: graph, vertex, button, ui;
+                    collisionForces: false">                 
+                <a-sphere 
+                    id="rightHandColliderSphere" 
+                    radius="0.005" 
+                    color="blue" 
+                    segments-width="16"
+                    segments-height="8"
+                    position="-0.01 -0.03 -0.06"
+                    visible="true"></a-sphere>
+            </a-entity>
+            
+            <a-entity id="povCam" camera look-controls wasd-controls position="0 1.7 0" >
+            </a-entity>
+        </a-entity>
+        
+        <a-entity
+            id = "graph-ghz_358"
+            grabbable="startButtons:gripdown; endButtons:gripup; usePhysics: true"
+            graph='name:ghz_358; graphData:
+                {
+                    "graph": {
+                        "vertices": [
+                            {
+                                "id": 0,
+                                "position": [
+                                    0.05598764112972767,
+                                    -0.05444408462047701,
+                                    -0.08035750340294168
+                                ],
+                                "geometry": "sphere",
+                                "edges": [
+                                    14,
+                                    0,
+                                    8,
+                                    1,
+                                    15
+                                ],
+                                "neighbours": [
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "id": 1,
+                                "position": [
+                                    0.014658202181070903,
+                                    0.0029487812222975807,
+                                    -0.0799146690248248
+                                ],
+                                "geometry": "sphere",
+                                "edges": [
+                                    14,
+                                    2,
+                                    9,
+                                    3
+                                ],
+                                "neighbours": [
+                                    0,
+                                    2,
+                                    3,
+                                    7
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "position": [
+                                    0.01789240798292048,
+                                    -0.04270420459776214,
+                                    -0.026043087089775763
+                                ],
+                                "geometry": "sphere",
+                                "edges": [
+                                    0,
+                                    2,
+                                    10,
+                                    4
+                                ],
+                                "neighbours": [
+                                    0,
+                                    1,
+                                    3,
+                                    6
+                                ]
+                            },
+                            {
+                                "id": 3,
+                                "position": [
+                                    -0.024738678258595367,
+                                    -0.04792790083263754,
+                                    -0.07453404964110533
+                                ],
+                                "geometry": "sphere",
+                                "edges": [
+                                    8,
+                                    9,
+                                    10,
+                                    11,
+                                    5
+                                ],
+                                "neighbours": [
+                                    0,
+                                    1,
+                                    2,
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "id": 4,
+                                "position": [
+                                    -0.09364285542275917,
+                                    -0.07412934306501529,
+                                    -0.09307787996929606
+                                ],
+                                "geometry": "cube",
+                                "edges": [
+                                    1,
+                                    11,
+                                    12,
+                                    6
+                                ],
+                                "neighbours": [
+                                    0,
+                                    3,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "id": 5,
+                                "position": [
+                                    0.12396044070977458,
+                                    -0.08922595402686528,
+                                    -0.10362811383101211
+                                ],
+                                "geometry": "cube",
+                                "edges": [
+                                    15,
+                                    5,
+                                    13,
+                                    7
+                                ],
+                                "neighbours": [
+                                    0,
+                                    3,
+                                    6,
+                                    7
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "position": [
+                                    0.018891103759250752,
+                                    -0.06383608994415291,
+                                    0.03908027811589532
+                                ],
+                                "geometry": "cube",
+                                "edges": [
+                                    4,
+                                    12,
+                                    13
+                                ],
+                                "neighbours": [
+                                    2,
+                                    4,
+                                    5
+                                ]
+                            },
+                            {
+                                "id": 7,
+                                "position": [
+                                    0.015736749755039095,
+                                    0.0728877610728943,
+                                    -0.09714926900877296
+                                ],
+                                "geometry": "cube",
+                                "edges": [
+                                    3,
+                                    6,
+                                    7
+                                ],
+                                "neighbours": [
+                                    1,
+                                    4,
+                                    5
+                                ]
+                            }
+                        ],
+                        "edges": [
+                            {
+                                "id": 0,
+                                "config": [
+                                    0,
+                                    2,
+                                    1,
+                                    1
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 1,
+                                "config": [
+                                    0,
+                                    4,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "config": [
+                                    1,
+                                    2,
+                                    3,
+                                    3
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 3,
+                                "config": [
+                                    1,
+                                    7,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 1.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 4,
+                                "config": [
+                                    2,
+                                    6,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 5,
+                                "config": [
+                                    3,
+                                    5,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 1.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "config": [
+                                    4,
+                                    7,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 1.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 7,
+                                "config": [
+                                    5,
+                                    7,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 8,
+                                "config": [
+                                    0,
+                                    3,
+                                    3,
+                                    3
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 9,
+                                "config": [
+                                    1,
+                                    3,
+                                    1,
+                                    1
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 10,
+                                "config": [
+                                    2,
+                                    3,
+                                    2,
+                                    2
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 11,
+                                "config": [
+                                    3,
+                                    4,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 1.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 12,
+                                "config": [
+                                    4,
+                                    6,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 13,
+                                "config": [
+                                    5,
+                                    6,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 1.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 14,
+                                "config": [
+                                    0,
+                                    1,
+                                    2,
+                                    2
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            },
+                            {
+                                "id": 15,
+                                "config": [
+                                    0,
+                                    5,
+                                    0,
+                                    0
+                                ],
+                                "amplitude": 1.0,
+                                "phase": 0.0,
+                                "siblingConfig": [
+                                    0,
+                                    0,
+                                    []
+                                ]
+                            }
+                        ],
+                        "target_state": [
+                            "0000",
+                            "1111",
+                            "2222",
+                            "3333"
+                        ],
+                        "num_anc": 4
+                    }
+                }'
+            position="0 1.7 -0.2"
+        >
+            
+        </a-entity>
+</a-scene>
+</div>
