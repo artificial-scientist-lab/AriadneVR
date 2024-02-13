@@ -123,4 +123,3 @@ Pressing the B-button while hovering over a different vertex will connect the ed
 Upon which the output state is re-computed.
 
 ![ui_IV](assets/readme/Folie5.JPG)
-
