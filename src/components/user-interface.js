@@ -32,7 +32,6 @@ AFRAME.registerComponent("controlpanel", {
 		this.columnIndex - the index of the current column of buttons
 		this.newGraphCounter - the number of new graphs spawned
 		this.template - container the template for the config file
-		this.openGaps - container for the gaps in the template that need to be filled
 	*/
 
 	//Group: lifecycle-handlers

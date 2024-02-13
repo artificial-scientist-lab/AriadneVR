@@ -176,9 +176,8 @@ AFRAME.registerComponent("vertex", {
 		removes physics behaviour when the graph is grabbed.
 	*/
 	tick: function () {
-		//// this is a dirty trick to stop the vertices of floating away when the graph is grabbed. There must be a better way to do this
+		// this is a dirty trick to stop the vertices of floating away when the graph is grabbed. There must be a better way to do this
 		if (this.el.parentNode.is("grabbed")) {
-			// this.el.components['dynamic-body'].syncToPhysics()} //without this the vertex doesn't move along the graph
 			if (this.el.hasAttribute("dynamic-body")) {
 				console.log("removing dynamic body");
 				this.el.removeAttribute("dynamic-body");

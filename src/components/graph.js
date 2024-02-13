@@ -232,11 +232,11 @@ AFRAME.registerComponent("graph", {
 		Saves the graph data to a file and initiates the download.
 	*/
 	save: function () {
-		// this is necessary os JS (or I) is (am) stupid and (do) does not know how to copy objects ʕノ•ᴥ•ʔノ ︵ ┻━┻
-		// so we need to save the original graphData and then restore it ┬─┬ノ( º _ ºノ)
-
+		//copy the current objects
 		const vertices = [...this.graphData.graph.vertices];
 		const edges = [...this.graphData.graph.edges];
+
+		//turn objects in serializable data
 		this.graphData.graph.vertices = this.graphData.graph.vertices.map((v) =>
 			v.getConfig()
 		);
@@ -460,7 +460,7 @@ AFRAME.registerComponent("graph", {
 				: Math.max(
 						...Object.values(this.el.attributes)
 							.filter((attr) => attr.name.startsWith("edge"))
-							.map((attr) => Number.parseInt(attr.name.match(/(\d+)/)[0])) //search for the first digit in the name
+							.map((attr) => Number.parseInt(attr.name.match(/(\d+)/)[0])) //search for the first number in the name
 				  ) + 1;
 
 		// check for siblings
