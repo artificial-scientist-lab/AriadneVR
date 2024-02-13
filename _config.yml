@@ -19,7 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: VRiadne
-email: your-email@example.com
+author: Artificial Scientist Lab
+email: mario.krenn@mpl.mpg.de
+
 #description: >- # this means to ignore newlines until "baseurl:"
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
@@ -29,13 +31,8 @@ url: "https://vriadne.github.io" # the base hostname & protocol for your site, e
 twitter_username:  MarioKrenn6240
 github_username: artificial-scientist-lab
 
-
 # Build settings
 theme: minima
-
-# Build settings
-theme: minima
-plugins:
 
 # Exclude from processing.
 # The following items will not be processed, by default.
