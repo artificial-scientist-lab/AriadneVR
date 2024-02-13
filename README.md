@@ -8,7 +8,7 @@ See the corresponding [preprint] for more information.
 
 ## Dependencies
 
-Besides the core A-Frame library VRiadne uses a few open-source A-Frame components imported as browser files in [index.html](index.html)
+Besides the core A-Frame library VRiadne uses a few open-source A-Frame components imported as browser files in [vr_env_standalone.html](/vr_env_standalone.html)
 
 1. [super-hands](https://github.com/c-frame/aframe-super-hands-component) (for gesture controls)
 2. [aframe-physics-system](https://github.com/n5ro/aframe-physics-system) (for proper constraints for super-hands)
@@ -18,6 +18,27 @@ Besides the core A-Frame library VRiadne uses a few open-source A-Frame componen
 
 To run correctly an active internet connection is therefore required.
 If this is not desired, these components need to be made available locally.
+VRiadne also uses the [Line](/https://github.com/mrdoob/three.js/tree/dev/examples/jsm/lines) addon from [THREE.js](https://github.com/mrdoob/three.js) which isn't included in the THREE.js version shipping with A-Frame.
+This addon is included in the code with minimal changes [here](./src/lines/).
+
+## Files:
+
+The html-page setting up the tool is given [here](/vr_env_standalone.html).</br>
+The source code is given in the [/src](/src/) folder and contains the line addon as well as the custom
+A-frame components:
+
+1. [edge.js](/src/components/edge.js) Component for displaying edge geometries and their changes
+2. [graph-editor.js](./src/components/graph-editor.js) Component for enabling a controller to change graphs.
+3. [graph-library.js](./src/components/graph-library.js) Component for spawning graphs
+4. [graph.js](./src/components/graph.js) Component for constructing graph models and storing the graph state
+5. [perfect-matching.js](./src/components/perfect-matching.js) Component for displaying perfect matchings.
+6. [user-interface.js](./src/components/user-interface.js) Collection of components for the UI, buttons, controller menus and the control-panel.
+7. [vertex.js](./src/components/vertex.js) Component for vertices
+
+In addition the [/lib](./lib/) folder contains relevant helper skripts:
+
+1. [jsonConv.py](/lib/jsonConv.py) Python script for converting PyTheus output.
+2. [helpers.js](/lib/helpers.js) JS-port of the PyTheus perfect matching alghorithm and minor helper functions used by some source components.
 
 ## How to Use
 
@@ -29,11 +50,12 @@ Compatible with the Oculus Quest 2. Use on other headsets will require adjustmen
 
 ### Self-Hosting
 
-Modifying the available graphs will require self-hosting of the Website, e.g. by a cloning the Repo and setting up your own GitHub Pages.</br>
+Modifying the available graphs will require self-hosting of the tool.
+To do this simply clone the main branch of this repository and host [vr_env_standalone.html](/vr_env_standalone.html) e.g. on a local server.</br>
 
 #### Adding PyTheus Graphs
 
-To add a PyTheus discovered graph, rename the specific graph-file of the search to start with `plot` and then run the [jsonConv.py](/lib/jsonConv.py)-skript with appropriate arguments. This will compute an initial 3D-layout and modify the appropriate files for the graph to be added to the VR-tool on the next session.
+To add a PyTheus discovered graph, rename the desired graph-file of the output to begin with `plot` and run the [jsonConv.py](/lib/jsonConv.py)-skript with appropriate paths as arguments. This will compute an initial 3D-layout and modify the appropriate files for the graph to be added to the VR-tool on the next session. The graph is then added to the [/processedJSON/](/processedJSON/) folder in the specified category.
 
 #### Adding any Graph
 
@@ -84,7 +106,7 @@ A template for the graph file is given below:
 ### Control Scheme
 
 ![mapping](assets/readme/Folie1.JPG)
-Button mapping of the VR-Graph-Inspector on Quest 2 controllers, some functionality is conditional on the current inspector state. </br>
+Button mapping of the VR-Graph-Inspector on Quest 2 controllers, some functionality is conditional on the current inspector state. For collision interactions (like grabbing), two blue spheres in front of the controllers represent their collsion boxes.</br>
 
 ### User Interface
 
@@ -95,8 +117,8 @@ Empty control panel with two buttons allowing for spawning of a new graphs, and 
 </br>
 </br>
 ![ui_II](assets/readme/Folie3.JPG)
-By spawning the graph library menu via press of the Y-button and selecting a graph, it's 3D-model is constructed centered on the position of the right-hand controller.
-At the top of the control-panel, a new button will spawn bearing the name of the selected graph, controlling whether the corresponding graph can be edited.
+To spawn a Graph press of the Y-button and selecting a graph from a Category with the X-button. Its 3D-model is constructed centered on the position of the right-hand controller.
+At the top left of the control-panel, a new button will spawn bearing the name of the selected graph, controlling whether the corresponding graph can be edited.
 </br>
 </br>
 </br>
