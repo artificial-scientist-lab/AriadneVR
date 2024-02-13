@@ -25,7 +25,6 @@ If this is not desired, these components need to be made available locally.
 
 Example instance found under .
 Compatible with the Oculus Quest 2. Use on other headsets will require adjustment of the control scheme in the source code.
-It contains all graphs mentioned in [preprint]
 </br>
 
 ### Self-Hosting
