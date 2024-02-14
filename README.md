@@ -2,9 +2,9 @@
 
 ## Description
 
-AriadneVR is VR environment to analyse and manipulate [PyTheus](https://github.com/artificial-scientist-lab/PyTheus) graphs in VR using the [A-frame](<https://aframe.io>) WebVR-framework.
-In its current form it is compatible with an Oculus Quest 2.
-To try it out vist our [instance]().
+AriadneVR is VR environment to analyze and manipulate [PyTheus](https://github.com/artificial-scientist-lab/PyTheus) graphs in VR using the [A-frame](<https://aframe.io>) WebVR-framework.
+In its current form, it is compatible with an Oculus Quest 2.
+To try it out visit our [instance]().
 The tool allows free exploration of colored graphs representing quantum optics experiments.
 See the corresponding [preprint]() for more information.
 
