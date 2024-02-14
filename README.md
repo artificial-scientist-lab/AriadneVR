@@ -10,13 +10,14 @@ See the corresponding [preprint]() for more information.
 
 ## Dependencies
 
-Besides the core A-Frame library AriadneVR uses a few open-source A-Frame components imported as browser files in [vr_env_standalone.html](/vr_env_standalone.html)
+Besides the core A-Frame library AriadneVR uses a few open-source A-Frame components as well as the math.js library imported as browser files in [vr_env_standalone.html](/vr_env_standalone.html)
 
 1. [super-hands](https://github.com/c-frame/aframe-super-hands-component) (for gesture controls)
-2. [aframe-physics-system](https://github.com/n5ro/aframe-physics-system) (for proper constraints for super-hands)
-3. [aframe-physics-extras](https://github.com/wmurphyrd/aframe-physics-extras) (for colliders and collision filters)
-4. [aframe-super-keyboard](https://github.com/supermedium/aframe-super-keyboard) (for a keyboard)
-5. [aframe-fps-counter-component](https://github.com/supermedium/superframe/tree/master/components/fps-counter/) (for an fps counter in VR)
+2. [math.js](https://github.com/josdejong/mathjs) (for complex numbers)
+3. [aframe-physics-system](https://github.com/n5ro/aframe-physics-system) (for proper constraints for super-hands)
+4. [aframe-physics-extras](https://github.com/wmurphyrd/aframe-physics-extras) (for colliders and collision filters)
+5. [aframe-super-keyboard](https://github.com/supermedium/aframe-super-keyboard) (for a keyboard)
+6. [aframe-fps-counter-component](https://github.com/supermedium/superframe/tree/master/components/fps-counter/) (for an fps counter in VR)
 
 To run correctly an active internet connection is therefore required.
 If this is not desired, these components need to be made available locally.
