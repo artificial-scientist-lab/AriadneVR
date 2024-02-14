@@ -244,6 +244,7 @@ AFRAME.registerComponent("controlpanel", {
 				this.activeGraph.data.name + "_searchTemplate" + ".json",
 				"text/plain"
 			);
+			this.el.removeEventListener("superkeyboardinput", this.events.saveTemplate)
 		},
 
 		/*Function:spawnNewGraph
