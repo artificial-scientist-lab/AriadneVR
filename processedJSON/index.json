@@ -115,8 +115,7 @@
         "srv_554",
         "srv_632",
         "srv_655",
-        "srv_733",
-        "k2maximal4qubitscomplex"
+        "srv_733"
     ],
     "Measurements": [
         "ghz_analyzer_2d",
