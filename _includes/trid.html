@@ -19,6 +19,13 @@
         <a-entity id="player">
             <a-entity id="leftHandCollider" 
                 laser-controls="hand: left; model: true"
+                raycaster="
+                objects: [raycastable]; 
+                lineColor: #EF8354; 
+                lineOpacity: 0.5; 
+                far:2; 
+                near: 0.01; 
+                interval: 100"
                 static-body="shape: none;"
                 shape__main="shape: sphere; radius: 0.005; offset: +0.01 -0.03 -0.06" 
                 super-hands="
@@ -44,6 +51,13 @@
             <a-entity id="rightHandCollider" 
                 position="0 1.7 -0.2"
                 laser-controls="hand: right; model: true"
+                raycaster="
+                objects: [raycastable]; 
+                lineColor: #EF8354; 
+                lineOpacity: 0.5; 
+                far:2; 
+                near: 0.01; 
+                interval: 100"
                 static-body="shape: none;"
                 shape__main="shape: sphere; radius: 0.005; offset: -0.01 -0.03 -0.06" 
                 physics-collider
