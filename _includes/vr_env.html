@@ -8,14 +8,7 @@
         embedded
         >
         <canvas></canvas>
-        <a-plane 
-        color="#494c52" 
-        height="10" 
-        width="10" 
-        rotation="-90 0 0" 
-        material="side: double"
-        position="0 0 0">
-        </a-plane>
+
         <a-entity id="player">
             <a-entity id="leftHandCollider" 
                 laser-controls="hand: left; model: true"
@@ -88,7 +81,14 @@
             <a-entity id="povCam" camera look-controls wasd-controls position="0 1.7 0" >
             </a-entity>
         </a-entity>
-
+        <a-plane 
+        color="#494c52" 
+        height="10" 
+        width="10" 
+        rotation="-90 0 0" 
+        material="side: double"
+        position="0 0 0">
+        </a-plane>
         <a-plane 
             color="#F4E6B8" 
             height="0.5" 

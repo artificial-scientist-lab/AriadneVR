@@ -25,14 +25,7 @@
         renderer="highRefreshRate: true;"
         embedded
         >
-        <a-plane 
-        color="#494c52" 
-        height="10" 
-        width="10" 
-        rotation="-90 0 0" 
-        material="side: double"
-        position="0 0 0">
-        </a-plane>
+
         
         <a-entity id="player">
             <a-entity id="leftHandCollider" 
@@ -119,6 +112,15 @@
                 scale="0.4 0.4 0.4"
                 fps-counter="for90fps: true">
             </a-entity>
+        </a-plane>
+
+        <a-plane 
+        color="#494c52" 
+        height="10" 
+        width="10" 
+        rotation="-90 0 0" 
+        material="side: double"
+        position="0 0 0">
         </a-plane>
 
     </a-scene>
