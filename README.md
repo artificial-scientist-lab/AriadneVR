@@ -1,12 +1,12 @@
 # AriadneVR
-
+[**Virtual Reality for Understanding Artificial-Intelligence-driven Scientific Discovery with an Application in Quantum Optics**](https://arxiv.org/abs/2403.00834) </br>
+*Philipp Schmidt, Sören Arlt, Carlos Ruiz-Gonzalez, Xuemei Gu, Carla Rodríguez, Mario Krenn*
 ## Description
 
 AriadneVR is VR environment to analyse and manipulate [PyTheus](https://github.com/artificial-scientist-lab/PyTheus) graphs in VR using the [A-frame](<https://aframe.io>) WebVR-framework.
 In its current form it is compatible with an Oculus Quest 2.
 To try it out vist our [instance](https://artificial-scientist-lab.github.io/AriadneVR/).
 The tool allows free exploration of colored graphs representing quantum optics experiments.
-See the corresponding [preprint]() for more information.
 
 ## Dependencies
 
